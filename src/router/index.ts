@@ -16,17 +16,21 @@ const routes: Array<RouteRecordRaw> = [
         redirect: '/snaps'
       },
       {
+        path: 'snaps',
+        component: () => import('@/views/SnapPage.vue'),
+      },
+      {
+        path: 'snaps/:id',
+        component: () => import('@/views/SnapDetails.vue'),
+      },
+      {
         path: 'tab1',
         component: () => import('@/views/Tab1Page.vue')
       },
       {
         path: 'tab2',
         component: () => import('@/views/Tab2Page.vue')
-      },
-      {
-        path: 'snaps',
-        component: () => import('@/views/SnapPage.vue')
-      },
+      }
     ]
   }
 ]

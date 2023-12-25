@@ -20,12 +20,17 @@ import '@ionic/vue/css/text-transformation.css';
 import '@ionic/vue/css/flex-utils.css';
 import '@ionic/vue/css/display.css';
 
+/* Global Components */
+import TopBar from './components/TopBar.vue';
+
 /* Theme variables */
 import './theme/variables.css';
 
 const app = createApp(App)
   .use(IonicVue)
   .use(router);
+
+app.component('top-bar', TopBar);
   
 router.isReady().then(() => {
   app.mount('#app');
