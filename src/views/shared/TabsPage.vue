@@ -45,16 +45,16 @@ export default defineComponent({
     IonPage,
     IonRouterOutlet,
   },
-  data() {
+  setup() {
+    const checkTabDisabled = (currentRoute: string, tabName: string): boolean => {
+      return currentRoute.includes(tabName);
+    };
+
     return {
+      checkTabDisabled,
       ellipse,
       square,
       triangle,
-    }
-  },
-  methods: {
-    checkTabDisabled: (currentRoute: string, tabName: string): boolean => {
-      return currentRoute.includes(tabName);
     }
   }
 });

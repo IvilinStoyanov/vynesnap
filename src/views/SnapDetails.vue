@@ -18,6 +18,6 @@ export default defineComponent({
     components: {
         IonPage,
         IonContent
-    }
+    },
 })
 </script>
