@@ -1,7 +1,7 @@
 <template>
     <ion-page>
         <!-- top bar component -->
-        <top-bar :title="'Snap Details'"></top-bar>
+        <top-bar :title="'Snap Details'" :page-default-back-link="'/snaps'"></top-bar>
         <ion-content :fullscreen="true">
             <h2>test 1</h2>
             <h2>test 2</h2>
