@@ -14,7 +14,6 @@ import { IonHeader, IonToolbar, IonTitle, IonBackButton, IonButtons } from "@ion
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  // type inference enabled
   props: {
     title: String,
     pageDefaultBackLink: String

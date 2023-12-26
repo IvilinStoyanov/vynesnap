@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'snaps/:id',
-        component: () => import('@/views/SnapDetails.vue'),
+        component: () => import('@/views/SnapDetailsPage.vue'),
       },
       {
         path: 'tab1',

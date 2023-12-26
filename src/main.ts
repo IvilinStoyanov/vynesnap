@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import TopBar from './components/shared/TopBar.vue';
 import router from './router';
+import store from './store';
 
 import { IonicVue } from '@ionic/vue';
 
@@ -20,18 +22,17 @@ import '@ionic/vue/css/text-transformation.css';
 import '@ionic/vue/css/flex-utils.css';
 import '@ionic/vue/css/display.css';
 
-/* Global Components */
-import TopBar from './components/TopBar.vue';
 
 /* Theme variables */
 import './theme/variables.css';
 
 const app = createApp(App)
   .use(IonicVue)
-  .use(router);
+  .use(router)
+  .use(store);
 
 app.component('top-bar', TopBar);
-  
+
 router.isReady().then(() => {
   app.mount('#app');
 });

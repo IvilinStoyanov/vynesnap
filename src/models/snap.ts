@@ -1,4 +1,4 @@
-export interface Snaps {
+export interface Snap {
     id: string;
     title: string;
     description: string;
