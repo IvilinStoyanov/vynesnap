@@ -24,6 +24,10 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/SnapDetailsPage.vue'),
       },
       {
+        path: 'snaps/create',
+        component: () => import('@/views/SnapCreatePage.vue'),
+      },
+      {
         path: 'tab1',
         component: () => import('@/views/Tab1Page.vue')
       },

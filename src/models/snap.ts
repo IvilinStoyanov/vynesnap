@@ -1,5 +1,5 @@
 export interface Snap {
-    id: string;
+    id?: string;
     title: string;
     description: string;
     imgUrl: string;
