@@ -1,7 +1,8 @@
 module.exports = {
     pwa: {
-      workboxPluginMode: 'GenerateSW',
+      workboxPluginMode: 'InjectManifest',
       workboxOptions: {
+        swSrc: 'src/registerServiceWorker.js',
         navigateFallback: '/index.html',
       },
     },
