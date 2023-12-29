@@ -1,8 +1,12 @@
 import { createStore } from "vuex";
 import { Snap } from "@/models/snap";
 
+export interface RootState {
+  snaps: Snap[];
+}
+
 const store = createStore({
-  state() {
+  state(): RootState {
     return {
       snaps: [
         {
@@ -44,12 +48,12 @@ const store = createStore({
     };
   },
   actions: {
-    createSnap(context, snapsData: Snap) {
+    createSnap(context, snapsData: Snap): void {
       context.commit("createSnap", snapsData);
     },
   },
   mutations: {
-    createSnap(state, snapsData: Snap) {
+    createSnap(state, snapsData: Snap): void {
       const newSnap: Snap = {
         id: new Date().toISOString(),
         title: snapsData.title,
@@ -61,10 +65,10 @@ const store = createStore({
     },
   },
   getters: {
-    snaps(state) {
+    snaps(state: RootState): Snap[] {
       return state.snaps;
     },
-    snap(state) {
+    snap(state: RootState): (snapId: string) => Snap | undefined {
       return (snapId: string) => {
         return state.snaps.find((snap: Snap) => snap.id === snapId);
       };

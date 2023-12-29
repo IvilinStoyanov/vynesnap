@@ -3,6 +3,8 @@ import App from './App.vue'
 import TopBar from './components/shared/TopBar.vue';
 import router from './router';
 import store from './store';
+import './registerServiceWorker'
+
 
 import { IonicVue } from '@ionic/vue';
 
